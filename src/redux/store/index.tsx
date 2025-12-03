@@ -17,7 +17,7 @@ import storage from "./sync_storage";
 const persistConfig = {
   key: "Bergold",
   storage,
-  whitelist: ["shop"], // add the name of the slice you want to persist
+  whitelist: ["shop"], 
 };
 
 const reducers: any = combineReducers({
@@ -45,7 +45,7 @@ export const makeStore = () => {
   if (isServer) {
     return makeConfiguredStore(reducers);
   } else {
-    // client-side: use the persisted reducer so redux-persist handles rehydration
+    
     return makeConfiguredStore(persistedReducer);
   }
 };

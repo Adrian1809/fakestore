@@ -62,13 +62,13 @@ const shopSlice = createSlice({
     builder.addMatcher(
       shopAPI.endpoints.listProducts.matchFulfilled,
       (state, action) => {
-        state.products = action.payload; // Assuming action.payload contains the list of jobs
+        state.products = action.payload; 
       }
     ),
       builder.addMatcher(
         shopAPI.endpoints.listCategories.matchFulfilled,
         (state, action) => {
-          state.categories = action.payload; // Assuming action.payload contains the list of jobs
+          state.categories = action.payload; 
         }
       );
   },
